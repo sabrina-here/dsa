@@ -16,9 +16,9 @@ class Node{
 };
 
 Node* inputTree(){
-    Node* root;
+    Node* root= NULL;
     int h; cin>>h;
-    if(h!= -1) root->v = h;
+    if(h!= -1) root = new Node(h);
     queue<Node*> q;
     if(root) q.push(root);
     while(!q.empty()){
@@ -120,6 +120,33 @@ int treeHeight(Node* root){
 // 	return count;
 	
 // }
+
+
+// -----------finding level of a node using pair-----------------
+
+// int nodeLevel(TreeNode<int>* root, int searchedValue)
+// {
+//     // Write your code here.
+//     queue<pair<TreeNode<int>*,int>> q ;
+//     if(root) q.push({root,1});
+//     while (!q.empty()) {
+//       pair<TreeNode<int> *, int> pr = q.front();
+//       TreeNode<int> *temp = pr.first;
+//       int level = pr.second;
+//       if (temp->val == searchedValue)
+//         return level;
+//       if (temp->left)
+//        {
+//             q.push({temp->left,level+1});
+//        }
+//         if(temp->right) {
+//             q.push({temp->right,level+1});
+//         }
+//         q.pop();
+        
+//     }
+// }
+
 
 int main(){
 
